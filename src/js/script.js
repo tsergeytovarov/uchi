@@ -6,8 +6,12 @@
 
   var rezultField = document.querySelector('.js-rezult');
 
-  var firstNumber = document.querySelector('.js-first-number').innerText;
-  var secondNumber = document.querySelector('.js-second-number').innerText;
+  var first = document.querySelector('.js-first-number');
+  var second = document.querySelector('.js-second-number');
+
+
+  var firstNumber = first.innerText;
+  var secondNumber = second.innerText;
 
   var rezult = +firstNumber + +secondNumber;
 
@@ -24,11 +28,13 @@
     evt.preventDefault();
     if (firstForm.value == firstNumber) {
       firstForm.classList.remove('error');
+      first.style.backgroundColor = 'transparent';
       firstForm.disabled = 'disabled';
       secondGraph.classList.add('active');
       secondGraph.focus();
     } else {
       firstForm.classList.add('error');
+      first.style.backgroundColor = 'yellow';
     }
   });
 
@@ -37,11 +43,13 @@
     evt.preventDefault();
     if (secondForm.value == secondNumber) {
       secondForm.classList.remove('error');
+      second.style.backgroundColor = 'transparent';
       secondForm.disabled = 'disabled';
       rezultField.disabled = '';
       rezultField.value = '';
     } else {
       secondForm.classList.add('error');
+      second.style.backgroundColor = 'yellow';
     }
   });
 
