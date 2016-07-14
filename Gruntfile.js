@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       html: {
         expand: true,
         cwd: 'src/',
-        src: ['*.{html}'],
+        src: ['*.html'],
         dest: 'build/'
       }
     },
@@ -211,7 +211,7 @@ module.exports = function(grunt) {
     'cmq',
     'autoprefixer',
     'csscomb',
-    'cssmin',
+    //'cssmin',
     'concat',
     'uglify',
     'imagemin',

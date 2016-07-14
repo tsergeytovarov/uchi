@@ -1,9 +1,109 @@
 body {
   min-width: 1024px;
+  font-size: 24px;
 }
 
-.conatiner {
+.container {
   width: 1000px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 0 12px;
+  text-align: center;
+}
+
+.quest {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    padding: 0 10px;
+  }
+
+  input:disabled {
+    border: 1px solid transparent;
+  }
+
+  input {
+    &.error {
+      border: 1px solid red;
+      color: red;
+    }
+  }
+}
+
+.graph {
+  box-sizing: border-box;
+  width: 875px;
+  height: 125px;
+  margin: 50px auto 20px;
+  padding: 0 35px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 875px 83px;
+
+  form {
+    display: flex;
+  }
+
+  // 1 item size 38px
+
+  &__item {
+    height: 60px;
+    border-width: 2px 2px 0 2px;
+    border-style: solid;
+    border-color: violet;
+    border-radius: 50% / 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: violet;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      bottom: -4px;
+      transform: rotateZ(75deg);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 10px;
+      border-color: transparent transparent transparent violet;
+    }
+
+    input {
+      width: 40px;
+      padding: 0;
+      transform: translateY(-40px);
+      font-size: 18px;
+
+      &:disabled {
+        border: 1px solid transparent;
+      }
+
+      &.error {
+        border: 1px solid red;
+        color: red;
+      }
+    }
+  }
 }

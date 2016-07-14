@@ -2,15 +2,39 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Название проекта - меню</title>
+    <title>Название проекта</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <ul>
-      <li><a href="main.html" target="_blank">Главная страница</a></li>
-    </ul>
+    <div class="container">
+      <div class="quest">
+        <div class="quest__item js-first-number">7</div>
+        <div class="quest__item">+</div>
+        <div class="quest__item js-second-number">4</div>
+        <div class="quest__item">=</div>
+        <div class="quest__item">
+          <form action="/echo" method="get">
+            <input class="js-rezult" type="text" value="?" disabled>
+          </form>
+        </div>
+      </div>
 
+      <div class="graph">
+        <form action="/echo" method="get">
+          <div class="graph__item js-graph-1">
+            <input type="text">
+          </div>
+          <div class="graph__item js-graph-2">
+            <input type="text">
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
   </body>
 </html>

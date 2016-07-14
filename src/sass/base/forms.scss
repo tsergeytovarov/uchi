@@ -3,11 +3,12 @@ textarea,
 select,
 input[type="password"] {
   box-sizing: border-box;
-  width: 100%;
+  font-size: 24px;
   outline: none;
   font-family: $base-font;
-  font-size: 18px;
-  line-height: 20px;
+  width: 50px;
+  text-align: center;
+  padding: 0 5px;
 }
 
 label {
